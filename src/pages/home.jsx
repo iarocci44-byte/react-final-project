@@ -14,7 +14,7 @@ function home() {
         <img src={imdblogo} className="home__imdb-logo" alt="IMDB Logo" />
       </figure>
         <h1 className="home__title">Welcome to Movie Explorer</h1>
-        <h2 className="home__subtitle nav__links1"><Link to="/search">Search</Link> for Your Favorite Movies and TV shows!</h2>
+        <h2 className="home__subtitle nav__links1"><Link to="/search"><span className="yellow__link--bg">Search</span></Link> the IMDb database for Your Favorite Movies and TV shows!</h2>
       <div className="directorchair">
         <img src={directorchair} alt="Director Chair" />
       </div>       
