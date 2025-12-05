@@ -272,7 +272,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 70vh;
+    min-height: 50vh;
     width: 100%;
     flex-direction: column;
 }
@@ -321,6 +321,25 @@ ul {
     to { transform: rotate(360deg); }
 }
 
+@media (max-width: 1024px) {
+    .result__item {
+        flex-basis: calc(33.33% - 10px);
+    }
+    .result__item:nth-child(3n) {
+        margin-right: 10px; 
+    }
+    .result__item:nth-child(2n) {
+        margin-right: 0; 
+    }
+    .home__title {
+        font-size:  36px;
+    }
+    .home__subtitle {
+        font-size: 20px;
+        margin-top: 100px;
+    }   
+}
+
 @media (max-width: 768px) {
     .result__item {
         flex-basis: calc(50% - 10px);
@@ -334,12 +353,71 @@ ul {
     #footer {
         margin-top: 1200px;
     }
+    
+    /* Hide decorative elements on tablets */
+    .rightpopcorn,
+    .directorchair {
+        display: none;
+    }
+    
+    .leftcamera img {
+        max-width: 100px;
+    }
+    
+    .home__title {
+        font-size: 36px;
+        margin-bottom: 15px;
+        padding: 0 20px;
+        text-align: center;
+        margin-top: 200px
+    }
+    
+    .home__subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+        padding: 0 20px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     ul {
         display: list-item;
-        }
+    }
+    
+    /* Hide all decorative elements on mobile */
+    .leftcamera,
+    .rightpopcorn,
+    .directorchair {
+        display: none;
+    }
+    
+    .home__title {
+        font-size: 28px;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    
+    .home__subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+        padding: 0 15px;
+    }
+    
+    .home__imdb-logo img {
+        max-width: 90vw;
+    }
+    
+    .container__nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav__links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
 }
 
 /* Year filter styles */
@@ -602,4 +680,27 @@ ul {
 
 .back-button:hover {
     background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .movie-details__header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .movie-details__info {
+        text-align: center;
+    }
+    .rightpopcorn {
+        display: none;
+    }
+    .directorchair {
+        display: none;
+    }
+    .home__imdb-logo img {
+        max-width: 350px;
+    }
+    .home__title {
+        font-size: 36px;
+    }
 }
