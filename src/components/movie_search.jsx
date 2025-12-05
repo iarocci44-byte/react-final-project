@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function MovieSearch({ searchQuery, triggerSearch, yearMin, yearMax }) {
     const APIKEY = "e2ed71d6";
@@ -78,14 +79,25 @@ function MovieSearch({ searchQuery, triggerSearch, yearMin, yearMax }) {
                     <ul id="results__list">
                         {movies.map((movie) => (
                             <li key={movie.imdbID} className="result__item">
-                                <img 
-                                    src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Image"} 
-                                    alt={movie.Title}
-                                    style={{ width: '100%', height: 'auto' }}
-                                />
+                                <Link 
+                                    to={`/details?id=${movie.imdbID}`}
+                                    state={{ 
+                                        from: '/search', 
+                                        searchQuery, 
+                                        yearMin: debouncedYearMin, 
+                                        yearMax: debouncedYearMax 
+                                    }}
+                                >
+                                    <img 
+                                        src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Image"} 
+                                        alt={movie.Title}
+                                        style={{ width: '100%', height: 'auto', cursor: 'pointer' }}
+                                    />
+                                </Link>
                                 <h3>{movie.Title}</h3>
                                 <p>Year: {movie.Year}</p>
                                 <p>Type: {movie.Type}</p>
+                                
                             </li>
                         ))}
                     </ul>

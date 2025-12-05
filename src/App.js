@@ -4,6 +4,7 @@ import Search from './pages/search';
 import Home from './pages/home';
 import Nav from './components/nav';
 import Leftcamera from './components/leftcamera';
+import Details from './pages/details';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/details" element={<Details />} />
       </Routes>
     
    </div> 

@@ -506,3 +506,100 @@ ul {
     color: #222;
     font-size: 14px;
 }
+
+/* Movie Details Page Styles */
+.movie-details {
+    width: 100%;
+    max-width: 900px;
+}
+
+.movie-details__header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.movie-details__poster {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details__info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.movie-details__info h1 {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.movie-details__info p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.movie-details__plot {
+    margin-top: 20px;
+}
+
+.movie-details__plot h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-details__plot p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.movie-details__awards {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(255, 198, 0, 0.1);
+    border-radius: 8px;
+}
+
+.movie-details__awards h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.details__link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 300ms ease;
+}
+
+.details__link:hover {
+    background-color: #0056b3;
+}
+
+/* Back Button */
+.back-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 300ms ease;
+    align-self: flex-start;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}

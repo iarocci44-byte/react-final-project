@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "../App.css";
 import MovieSearch from "../components/movie_search";
 
 function Search() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const location = useLocation();
+  const [searchQuery, setSearchQuery] = useState(location.state?.searchQuery || "");
   const [triggerSearch, setTriggerSearch] = useState(false);
-  const [yearMin, setYearMin] = useState(1900);
-  const [yearMax, setYearMax] = useState(2025);
+  const [yearMin, setYearMin] = useState(location.state?.yearMin || 1900);
+  const [yearMax, setYearMax] = useState(location.state?.yearMax || 2025);
+
+  useEffect(() => {
+    if (location.state?.shouldSearch) {
+      setTriggerSearch(prev => !prev);
+    }
+  }, [location.state]);
 
   const handleSearch = () => {
     setTriggerSearch(!triggerSearch);

@@ -12,7 +12,7 @@ function nav() {
             <ul className="nav__links">
                 <li className="nav__link"><Link to="/">Home</Link></li>
                 <li className="nav__link"><Link to="/search">Search</Link></li>
-                <li className="nav__link"><Link to="/contact">Contact</Link></li>
+                {/*<li className="nav__link"><Link to="/contact">Contact</Link></li>*/}
             </ul>
         </div>
 
