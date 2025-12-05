@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import stockImg from '../assets/stock_img.png';
 
 function MovieSearch({ searchQuery, triggerSearch, yearMin, yearMax }) {
     const APIKEY = "e2ed71d6";
@@ -89,7 +90,7 @@ function MovieSearch({ searchQuery, triggerSearch, yearMin, yearMax }) {
                                     }}
                                 >
                                     <img 
-                                        src={movie.Poster !== "N/A" ? movie.Poster : "https://via.placeholder.com/300x450?text=No+Image"} 
+                                        src={movie.Poster !== "N/A" ? movie.Poster : stockImg} 
                                         alt={movie.Title}
                                         style={{ width: '100%', height: 'auto', cursor: 'pointer' }}
                                     />

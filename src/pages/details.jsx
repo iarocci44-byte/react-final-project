@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import stockImg from '../assets/stock_img.png';
 
 function Details() {
   const [searchParams] = useSearchParams();
@@ -93,7 +94,7 @@ function Details() {
       <div className="movie-details">
         <div className="movie-details__header">
           <img 
-            src={movieDetails.Poster !== "N/A" ? movieDetails.Poster : "https://via.placeholder.com/300x450?text=No+Image"} 
+            src={movieDetails.Poster !== "N/A" ? movieDetails.Poster : stockImg} 
             alt={movieDetails.Title}
             className="movie-details__poster"
           />
