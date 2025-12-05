@@ -148,6 +148,12 @@ ul {
     cursor: pointer;
 }
 
+.nav__links2 a:hover {
+    cursor: pointer;
+    transition: all 200ms ease;
+     border-bottom: 3px solid rgb(0, 0, 0);
+}
+
 .yellow__link--bg {
     background-color: rgb(255, 198, 0);
     padding: 8px 16px;
@@ -172,6 +178,10 @@ ul {
 }
 
 .nav__links1 a:hover .yellow__link--bg::after {
+    opacity: 1;
+}
+
+.nav__links2 a:hover .yellow__link--bg::after {
     opacity: 1;
 }
 
