@@ -49,7 +49,7 @@ function Search() {
           placeholder="Search for movies by title..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyPress}
         />
         <button onClick={handleSearch}>Search</button>
         <div id="year-filter" className="year-filter">

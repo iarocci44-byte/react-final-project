@@ -64,10 +64,11 @@ function MovieSearch({ searchQuery, triggerSearch, yearMin, yearMax }) {
     }, [url, debouncedYearMin, debouncedYearMax]);
 
     useEffect(() => {
-        if (searchQuery) {
+        if (searchQuery && triggerSearch !== undefined) {
             fetchMovies(searchQuery);
         }
-    }, [searchQuery, triggerSearch, debouncedYearMin, debouncedYearMax, fetchMovies]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [triggerSearch, debouncedYearMin, debouncedYearMax]);
 
     return (
         <div id="app__container">
